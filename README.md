@@ -86,10 +86,11 @@ A separate Python script, [`wet_performance_index.py`](wet_performance_index.py)
 
 ```
 📦 f1-2025-race-prediction/
- ┣ 📄 japan_gp_prediction.py          ← [Race-specific script]
- ┣ 📄 wet_performance_index.py        ← [Driver wet index calculator]
- ┣ 📄 README.md
- ┣ 📁 f1_cache/                        ← [FastF1 cache files]
+ ┣ 📄 Prediction_Japan.py          ← [Race-specific script]
+ ┣ 📄 Prediction_Bahrain.py        ← [Race-specific script]
+ ┣ 📄 wet_performance_index.py     ← [Driver wet index calculator]
+ ┣ 📄 README.md                     
+ ┣ 📁 f1_cache/                    ← [FastF1 cache files]
  ┗ 📄 requirements.txt
 ```
 
