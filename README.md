@@ -59,7 +59,7 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 ---
 
-## 🏁 Current Race: Japanese GP 2025
+## 🏁 Current Race: Bahrain GP 2025
 
 ```text
 🏆 Predicted Winner: VER
@@ -67,8 +67,8 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 Driver    | Predicted Race Time (s)
 --------  | ------------------------
-VER       | 90.421  
-NOR       | 90.657  
+VER       | 96.561
+SAI       | 96.843 
 ...       | ...
 ```
 
