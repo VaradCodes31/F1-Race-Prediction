@@ -41,8 +41,8 @@ for lap in race_laps.itertuples():
 # Convert to DataFrame
 clean_air_df = pd.DataFrame(clean_air_laps)
 
-# ✅ Manually set track length for Jeddah
-track_length_km = 6.174  # Jeddah Corniche Circuit
+# ✅ Manually set track length for Miami
+track_length_km = 5.412  # Miami International Autodrome 
 
 # Group by driver and calculate pace
 drivers = clean_air_df['Driver'].unique()
