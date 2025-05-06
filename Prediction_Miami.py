@@ -106,7 +106,7 @@ merged_data["PredictedLapTime (s)"] = model.predict(X)
 final_results = merged_data.sort_values("PredictedLapTime (s)")
 
 # Show winner
-print("2025 Miami GP Winner: ")
+print("Winner of the 2025 Miami GP: ")
 print(final_results[["Driver", "PredictedLapTime (s)"]])
 
 # Model error
