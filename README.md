@@ -23,6 +23,7 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 - `FastF1` – to retrieve F1 timing and telemetry data
 - `pandas`, `numpy` – for data manipulation
 - `scikit-learn` – for machine learning models (Gradient Boosting Regressor)
+- `matplotlib` – for plotting important data for better result analysis
 - `requests` – to pull weather forecasts via API
 - `OpenWeatherMap` – for real-time weather data
 
