@@ -66,7 +66,7 @@ quali_2025["PredictedRaceTime (s)"] = predicted_race_times
 quali_2025 = quali_2025.sort_values("PredictedRaceTime (s)")
 
 # Output prediction
-print("\n 🏁 Predicted 2025 Bahrain GP Winner 🏁\n")
+print("\n 🏁 2025 Bahrain GP Winner: 🏁\n")
 print(quali_2025[["Driver", "PredictedRaceTime (s)"]])
 
 # Evaluate model
