@@ -102,7 +102,7 @@ predicted_race_times = model.predict(X_imputed)
 quali_2025["PredictedRaceTime (s)"] = predicted_race_times
 quali_2025 = quali_2025.sort_values("PredictedRaceTime (s)")
 
-print("\n 🏁 Predicted 2025 Japanese GP Winner 🏁\n")
+print("\n 🏁 Winner of the 2025 Japanese GP: 🏁\n")
 print(quali_2025[["Driver", "PredictedRaceTime (s)"]])
 
 # Evaluate
