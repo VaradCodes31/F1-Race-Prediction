@@ -123,7 +123,7 @@ model.fit(X_train, y_train)
 clean_data["PredictedLapTime (s)"] = model.predict(X)
 
 final_results = clean_data.sort_values("PredictedLapTime (s)")
-print("2025 Saudi Arabian GP Winner: ")
+print("Winner of the 2025 Saudi Arabian GP: ")
 print(final_results[["Driver", "PredictedLapTime (s)"]])
 
 # MAE
