@@ -63,16 +63,16 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 ---
 
-## 🏁 Current Race: Miami GP 2025
+## 🏁 Current Race: Emilia-Romagna GP 2025
 
 ```text
-🏆 Predicted Winner: NOR
+🏆 Predicted Winner: LEC
 🔢 Example Output:
 
 Driver    | Predicted Race Time (s)
 --------  | ------------------------
-NOR       | 94.522
-VER       | 94.686
+LEC       | 84.542
+PIA       | 84.592
 ...       | ...
 ```
 
