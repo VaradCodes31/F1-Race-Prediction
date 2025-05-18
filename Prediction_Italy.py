@@ -9,17 +9,17 @@ import matplotlib.pyplot as plt
 
 fastf1.Cache.enable_cache("f1_cache")
 
-# Load the data for the Miami GP race session
-session_24 = fastf1.get_session(2024, "Miami", "R")
+# Load the data for the Italian GP race session
+session_24 = fastf1.get_session(2024, "Italy", "R")
 session_24.load()
 laps_2024 = session_24.laps[["Driver", "LapTime"]].copy()
 laps_2024.dropna(inplace=True)
 laps_2024["LapTime (s)"] = laps_2024["LapTime"].dt.total_seconds()
 
-# 2025 Miami GP Qualifying Data
+# 2025 Italian GP Qualifying Data
 qualifying_2025 = pd.DataFrame({
-    "Driver": ["VER", "NOR", "PIA", "LEC", "RUS", "HAM", "GAS", "ALO", "TSU", "SAI", "HUL", "OCO", "STR"],
-    "QualifyingTime (s)": [86.204, 86.269, 86.375, 86.754, 86.385, 87.006, 87.710, 87.604, 86.943, 86.569, 87.473, 86.824, 87.830]
+    "Driver": ["VER", "NOR", "PIA", "LEC", "RUS", "HAM", "GAS", "ALO", "TSU", "SAI", "HUL", "OCO", "STR", "ALB"],
+    "QualifyingTime (s)": [74.704, 74.962, 74.670, 75.604, 74.807, 75.765, 75.787, 75.431, 0.0, 75.432, 76.518, 76.613, 75.581, 75.473]
 })
 
 # Wet performance factors of drivers
@@ -32,10 +32,10 @@ qualifying_2025["WetPerformanceFactor"] = qualifying_2025["Driver"].map(driver_w
 
 # Get weather forecast
 API_KEY = "f2ec0f95e60e03ddb5d25c9b86cac2e7"
-weather_url = f"http://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid={API_KEY}&units=metric"
+weather_url = f"http://api.openweathermap.org/data/2.5/forecast?lat=45.5825&lon=9.2749&appid={API_KEY}&units=metric"
 response = requests.get(weather_url)
 weather_data = response.json()
-forecast_time = "2025-05-05 16:00:00"
+forecast_time = "2025-05-18 15:00:00"
 forecast_data = next((f for f in weather_data["list"] if f["dt_txt"] == forecast_time), None)
 
 rain_probability = forecast_data["pop"] if forecast_data else 0
@@ -66,11 +66,11 @@ qualifying_2025["TeamPerformanceScore"] = qualifying_2025["Team"].map(team_perfo
 
 # Race pace data
 race_pace_data = {
-    "LEC": 17.188549, "VER": 17.152932, "PIA": 16.998759, "HAM": 17.225083,
-    "ANT": 17.160323, "RUS": 17.162470, "ALB": 17.164001, "SAI": 17.187282,
-    "NOR": 17.057782, "LAW": 17.430904, "ALO": 17.319281, "BEA": 17.295020,
-    "HAD": 17.243451, "DOO": 15.480023, "OCO": 17.247822, "STR": 17.296368,
-    "HUL": 17.276173, "BOR": 17.248368, "TSU": 17.203481, "GAS": 17.283768,
+    "LEC": 16.998098, "VER": 16.953306, "PIA": 16.835355, "HAM": 17.006137,
+    "ANT": 16.989144, "RUS": 16.960288, "ALB": 16.966639, "SAI": 16.996014,
+    "NOR": 16.851962, "LAW": 17.389498, "ALO": 17.184529, "BEA": 17.287902,
+    "HAD": 17.026892, "DOO": 15.480023, "OCO": 17.057985, "STR": 17.174301,
+    "HUL": 17.096645, "BOR": 17.425006, "TSU": 17.023802, "GAS": 17.106888,
 }
 qualifying_2025["RacePace"] = qualifying_2025["Driver"].map(race_pace_data)
 
@@ -106,8 +106,16 @@ merged_data["PredictedLapTime (s)"] = model.predict(X)
 final_results = merged_data.sort_values("PredictedLapTime (s)")
 
 # Show winner
-print("Winner of the 2025 Miami GP: ")
+print("2025 Italian GP Standings: - ")
 print(final_results[["Driver", "PredictedLapTime (s)"]])
+
+# Predict podium winners
+podium = final_results.head(3)
+print("\n🏁 Podium Winners of the 2025 Miami GP:")
+print(f"🥇 1st Place: {podium.iloc[0]['Driver']} - {podium.iloc[0]['PredictedLapTime (s)']:.3f} s")
+print(f"🥈 2nd Place: {podium.iloc[1]['Driver']} - {podium.iloc[1]['PredictedLapTime (s)']:.3f} s")
+print(f"🥉 3rd Place: {podium.iloc[2]['Driver']} - {podium.iloc[2]['PredictedLapTime (s)']:.3f} s")
+
 
 # Model error
 y_pred = model.predict(X_test)
