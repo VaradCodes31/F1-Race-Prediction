@@ -4,7 +4,7 @@ from collections import Counter
 
 # Enable FastF1 cache and load race session
 fastf1.Cache.enable_cache('f1_cache')
-year, gp, session = 2025, 'Emilia-Romagna Grand Prix', 'R'
+year, gp, session = 2025, 'Monaco Grand Prix', 'FP3'
 race = fastf1.get_session(year, gp, session)
 race.load()
 
