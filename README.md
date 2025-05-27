@@ -51,6 +51,7 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 | `Temperature`          | Forecast temperature (°C) |
 | `RainProbability`      | Rain chance (%) at race time |
 | `Race Pace`            | Average Race Pace of the driver in clean air |
+| `Position Change`      | Average positions gained/lost in the qualifying round |
 
 ---
 
@@ -63,7 +64,7 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 ---
 
-## 🏁 Current Race: Emilia-Romagna GP 2025
+## 🏁 Current Race: Monaco GP 2025
 
 ```text
 🏆 Predicted Winner: LEC
@@ -71,8 +72,8 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 Driver    | Predicted Race Time (s)
 --------  | ------------------------
-LEC       | 84.542
-PIA       | 84.592
+LEC       | 78.439039
+NOR       | 78.508331
 ...       | ...
 ```
 
