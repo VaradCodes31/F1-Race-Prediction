@@ -64,16 +64,16 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 ---
 
-## 🏁 Current Race: Monaco GP 2025
+## 🏁 Current Race: Spanish GP 2025
 
 ```text
-🏆 Predicted Winner: LEC
+🏆 Predicted Winner: VER
 🔢 Example Output:
 
 Driver    | Predicted Race Time (s)
 --------  | ------------------------
-LEC       | 78.439039
-NOR       | 78.508331
+VER       | 80.272
+HAM       | 80.547
 ...       | ...
 ```
 
