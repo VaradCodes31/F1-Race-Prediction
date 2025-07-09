@@ -4,7 +4,7 @@ from collections import Counter
 
 # Enable FastF1 cache and load race session
 fastf1.Cache.enable_cache('f1_cache')
-year, gp, session = 2025, 'Monaco Grand Prix', 'R'
+year, gp, session = 2024, 'Belgium Grand Prix', 'R'
 race = fastf1.get_session(year, gp, session)
 race.load()
 
@@ -28,8 +28,8 @@ for lap in race_laps.itertuples():
 
 clean_air_df = pd.DataFrame(clean_air_laps)
 
-# Manually set track length for Monaco
-track_length_km = 3.337
+# Manually set track length for Belgium 
+track_length_km = 7.004
 
 # Group by driver and calculate pace
 data = []
