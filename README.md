@@ -64,7 +64,7 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 ---
 
-## 🏁 Current Race: Spanish GP 2025
+## 🏁 Current Race: Belgium GP 2025
 
 ```text
 🏆 Predicted Winner: VER
@@ -72,8 +72,8 @@ To build and maintain a predictive machine learning model for every Grand Prix i
 
 Driver    | Predicted Race Time (s)
 --------  | ------------------------
-VER       | 80.272
-HAM       | 80.547
+RUS       | 108.900
+PIA       | 108.931
 ...       | ...
 ```
 
