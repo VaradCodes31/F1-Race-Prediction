@@ -45,26 +45,26 @@ qualifying_2025 = pd.DataFrame({
     "Driver": ["PIA", "NOR", "VER", "RUS", "HAM", "LEC", "SAI", "ALB", 
                "OCO", "STR", "GAS", "ALO", "HUL"],
     "QualifyingTime (s)": [  
-        71.546,  # PIA (1:11.546)
-        71.755,  # NOR (1:11.755)
-        71.848,  # VER (1:11.848)
-        71.848,  # RUS (1:11.848)
-        72.045,  # HAM (1:12.045)
-        72.131,  # LEC (1:12.131)
-        73.203,  # SAI (1:13.203)
-        72.641,  # ALB (1:12.641)
-        73.201,  # OCO (1:13.201)
-        73.058,  # STR (1:13.058)
-        72.199,  # GAS (1:12.199)
-        72.284,  # ALO (1:12.284)
-        73.190   # HUL (1:13.190)
+        100.647,  # PIA (1:11.546)
+        100.562,  # NOR (1:11.755)
+        100.903,  # VER (1:11.848)
+        101.260,  # RUS (1:11.848)
+        101.939,  # HAM (1:12.045)
+        100.900,  # LEC (1:12.131)
+        101.758,  # SAI (1:13.203)
+        101.201,  # ALB (1:12.641)
+        101.525,  # OCO (1:13.201)
+        102.502,  # STR (1:13.058)
+        101.633,  # GAS (1:12.199)
+        102.385,  # ALO (1:12.284)
+        101.707   # HUL (1:13.190)
     ]
 })
 qualifying_2025["CleanAirRacePace (s)"] = qualifying_2025["Driver"].map(clean_air_race_pace)
 
 # Get weather data for Wallonia, Belgium
 API_KEY = "f2ec0f95e60e03ddb5d25c9b86cac2e7"
-weather_url = f"http://api.openweathermap.org/data/2.5/forecast?lat=41.5697&lon=2.2581&appid={API_KEY}&units=metric"
+weather_url = f"http://api.openweathermap.org/data/2.5/forecast?lat=50.5000&lon=2.47500&appid={API_KEY}&units=metric"
 response = requests.get(weather_url)
 weather_data = response.json()
 forecast_time = "2025-07-26 13:30:00"  # Belgium GP race time
